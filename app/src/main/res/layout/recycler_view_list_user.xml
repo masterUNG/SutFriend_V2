@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/clear_small"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--Avata-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleAvata"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon" />
+
+    <!--Name-->
+    <TextView
+        android:id="@+id/txtName"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
