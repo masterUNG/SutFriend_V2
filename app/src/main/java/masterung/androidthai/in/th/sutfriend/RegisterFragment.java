@@ -210,6 +210,8 @@ public class RegisterFragment extends Fragment {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(getActivity(), "Welcome " + nameString, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getActivity(), ServiceActivity.class));
+                        getActivity().finish();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
