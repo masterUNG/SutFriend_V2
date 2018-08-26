@@ -35,6 +35,7 @@ public class ListUserAdapter extends RecyclerView.Adapter<ListUserAdapter.ListUs
 
 
         return listUserViewHolder;
+
     }
 
     @Override
