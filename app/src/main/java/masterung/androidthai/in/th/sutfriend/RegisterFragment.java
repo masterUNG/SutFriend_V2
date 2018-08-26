@@ -27,6 +27,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -193,7 +195,32 @@ public class RegisterFragment extends Fragment {
 
     private void insertValueToFirebase(String uidString, String urlAvataString) {
 
-    }
+        //Setter Value to Model
+        UserSutModel userSutModel = new UserSutModel(nameString, urlAvataString);
+
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference()
+                .child("User")
+                .child(uidString);
+
+        //Getter by Model
+        databaseReference.setValue(userSutModel)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("26AugV1", "e Database ==> " + e.toString());
+            }
+        });
+
+
+
+    }   // insert
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
