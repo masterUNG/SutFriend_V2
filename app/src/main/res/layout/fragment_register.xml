@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/toolbarRegister"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <!--Content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:background="@drawable/clear_big"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Avata-->
+            <ImageView
+                android:scaleType="centerInside"
+                android:id="@+id/imvAvata"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/avata"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <!--Name-->
+            <EditText
+                android:id="@+id/edtName"
+                android:textSize="@dimen/h3"
+                android:background="@drawable/textfield_name"
+                android:inputType="text"
+                android:hint="Name :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--User-->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:textSize="@dimen/h3"
+                android:background="@drawable/textfield_email"
+                android:inputType="textEmailAddress"
+                android:hint="Email :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Password-->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:background="@drawable/textfield_password"
+                android:textSize="@dimen/h3"
+                android:inputType="text"
+                android:hint="Password :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
